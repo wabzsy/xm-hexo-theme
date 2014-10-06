@@ -1,0 +1,19 @@
+<div id="footer" >
+	<% if(theme.author.intro_line1&&theme.author.intro_line2){ %>
+	<section class="info">
+		<p> <%= theme.author.intro_line1 %> <br/>
+			<%= theme.author.intro_line2 %></p>
+	</section>
+	 <% } else { %>
+    <section class="info">
+
+    </section>
+    <% } %>
+		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wabzsy/xm-hexo-theme" target="_blank" title="XM">XM</a> &copy; <%= new Date().getFullYear() %>
+		<% if (config.email) { %>
+		<a href="mailto:<%= config.email %>" target="_blank" title="mailto:<%= config.author %>"><%= config.author %></a>
+		<% } else {%>
+		<a href="<%= config.url %>" title="<%= config.title %>"><%= config.title %></a>
+		<% } %>
+		</p>
+</div>
